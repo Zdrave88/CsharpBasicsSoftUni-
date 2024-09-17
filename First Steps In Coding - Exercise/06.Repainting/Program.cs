@@ -1,0 +1,15 @@
+﻿int plasticPerSquare = int.Parse(Console.ReadLine());
+int littersPaint = int.Parse(Console.ReadLine());
+int littersThinner = int.Parse(Console.ReadLine());
+int hours = int.Parse(Console.ReadLine());
+double plasticPrice = 1.50;
+double paintPrice = 14.50;
+double thinnerPrice = 5.00;
+double bagsMoney = 0.40;
+double plasticMoney = (plasticPerSquare + 2) * plasticPrice;
+double paintMoney = (littersPaint * 1.1) * paintPrice;
+double thinnerMoney = littersThinner * thinnerPrice;
+double totalMoney = plasticMoney + paintMoney + thinnerMoney + bagsMoney;
+double workersMoney = (totalMoney * 0.3) * hours;
+double everything = totalMoney + workersMoney;
+Console.WriteLine($"{everything:f2}");
